@@ -1,0 +1,13 @@
+body{
+
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 30;
+    background-color: 94C7B4
+}
+
+header {
+    background-color: 30253E; /* Cor do fundo do cabeçalho */
+    color: C3C88C;
+    padding: 10px 0;
+}
