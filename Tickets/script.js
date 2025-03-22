@@ -3,8 +3,11 @@ const fileInput = document.getElementById("file-input");
 
 dropArea.addEventListener("click", () => fileInput.click());
 
-fileInput.addEventListener("change", (event) => handleFiles(event.target.files));
-
+fileInput.addEventListener("change", (event) => {
+    const files = event.target.files;
+    console.log("Arquivo carregado:", files[0]); // Verifique no console do navegador
+    handleFiles(files);
+});
 dropArea.addEventListener("dragover", (event) => {
     event.preventDefault();
     dropArea.style.background = "rgba(255, 255, 255, 0.2)";
@@ -73,6 +76,9 @@ registrationForm.addEventListener("submit", (event) => {
     formData.append("githubUsername", githubUsername);
     formData.append("avatar", fileInput.files[0]);
 
+    for (let [key, value] of formData.entries()) {
+        console.log(key, value);
+    }    
     // Aqui você pode enviar os dados para o servidor
     // Exemplo usando fetch:
     fetch("https://seuservidor.com/api/register", {
