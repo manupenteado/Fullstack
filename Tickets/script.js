@@ -8,6 +8,7 @@ fileInput.addEventListener("change", (event) => {
     console.log("Arquivo carregado:", files[0]); // Verifique no console do navegador
     handleFiles(files);
 });
+
 dropArea.addEventListener("dragover", (event) => {
     event.preventDefault();
     dropArea.style.background = "rgba(255, 255, 255, 0.2)";
@@ -26,6 +27,9 @@ dropArea.addEventListener("drop", (event) => {
 function handleFiles(files) {
     const file = files[0];
     if (!file) return;
+
+    console.log("Tipo do arquivo:", file.type); // Depuração
+    console.log("Tamanho do arquivo:", file.size); // Depuração
 
     // Verificar tipo de arquivo
     if (!["image/jpeg", "image/png"].includes(file.type)) {
@@ -47,51 +51,61 @@ function handleFiles(files) {
     fileNameDisplay.textContent = file.name; // Exibe o nome do arquivo
     fileNameDisplay.style.display = "block"; // Mostra o elemento do nome do arquivo
 
-    alert(`✅ Arquivo "${file.name}" carregado com sucesso!`);
 }
 
-const registrationForm = document.getElementById("registrationForm");
+// Função para salvar os dados no localStorage
+function saveTicketData(fullName, email, githubUsername, avatar) {
+    const ticketData = {
+        fullName,
+        email,
+        githubUsername,
+        avatar,
+    };
+    localStorage.setItem("ticketData", JSON.stringify(ticketData));
+}
 
-registrationForm.addEventListener("submit", (event) => {
+// Função para carregar os dados na página do ticket
+function loadTicketData() {
+    const ticketData = JSON.parse(localStorage.getItem("ticketData"));
+    if (ticketData) {
+        // Preenche as informações do ticket
+        document.getElementById("ticket-fullName").textContent = ticketData.fullName;
+        document.getElementById("ticket-email").textContent = ticketData.email;
+        document.getElementById("ticket-githubUsername").textContent = ticketData.githubUsername;
+
+        // Exibe a foto do avatar
+        const avatarImg = document.getElementById("ticket-avatar");
+        avatarImg.src = ticketData.avatar;
+        avatarImg.style.display = "block";
+    }
+}
+
+// Evento de envio do formulário
+document.getElementById("registrationForm").addEventListener("submit", (event) => {
     event.preventDefault();
 
     const fullName = document.getElementById("fullName").value;
     const email = document.getElementById("email").value;
     const githubUsername = document.getElementById("githubUsername").value;
-    const fileInput = document.getElementById("file-input");
+    const avatarFile = document.getElementById("file-input").files[0];
 
-    if (!fullName || !email || !githubUsername) {
-        alert("Please fill out all fields!");
+    if (!fullName || !email || !githubUsername || !avatarFile) {
+        alert("Por favor, preencha todos os campos e carregue uma foto.");
         return;
     }
 
-    if (fileInput.files.length === 0) {
-        alert("Please upload an avatar!");
-        return;
-    }
-
-    const formData = new FormData();
-    formData.append("fullName", fullName);
-    formData.append("email", email);
-    formData.append("githubUsername", githubUsername);
-    formData.append("avatar", fileInput.files[0]);
-
-    for (let [key, value] of formData.entries()) {
-        console.log(key, value);
-    }    
-    // Aqui você pode enviar os dados para o servidor
-    // Exemplo usando fetch:
-    fetch("https://seuservidor.com/api/register", {
-        method: "POST",
-        body: formData,
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert("✅ Registration successful!");
-        console.log(data);
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("❌ Registration failed. Please try again.");
-    });
+    // Converte a imagem para uma URL de dados
+    const reader = new FileReader();
+    reader.onload = function (e) {
+        const avatarUrl = e.target.result;
+        saveTicketData(fullName, email, githubUsername, avatarUrl);
+        window.location.href = "tick.html"; // Redireciona para a página do ticket
+    };
+    reader.readAsDataURL(avatarFile);
 });
+
+// Carrega os dados ao abrir a página do ticket
+if (window.location.pathname.endsWith("tick.html")) {
+    loadTicketData();
+    
+}

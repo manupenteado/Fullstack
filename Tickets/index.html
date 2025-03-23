@@ -1,15 +1,26 @@
 <html>
+
     <head>
         <link rel="stylesheet" href="style.css">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
     </head>
+
     <body>
+
         <header>
             <div class = "title-container">
                 <img src = "assets/images/logo-full.svg" alt = "Logo" class = "icon">
                 <span class = "title-text"></span>
             </div>
         </header>
+        <div class = "decoration-bottom">
+            <img 
+            src = "assets/images/pattern-squiggly-line-bottom-desktop.svg"
+            /></div>
+            <div class = "decoration-top">
+                <img 
+                src = "assets/images/pattern-squiggly-line-top.svg"
+                /></div>
         <h1 class = "first-title">Your Journey to Coding Conf<br>2025 Starts Here!</h1>
         <p class = "sub-title">Secure your spot at next year's biggest coding conference.</p>
         <div class="upload-container">
@@ -17,9 +28,8 @@
             <div id="drop-area">
                 <img src="assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon">
                 <p class="upload-text">Drag and drop or click to upload</p>
-                <input type="file" id="file-input" accept="image/png, image/jpeg">
-                <!-- Adicione este elemento para exibir o nome do arquivo -->
-                <p id="file-name" ></p>
+                <input type="file" id="file-input" accept="image/png, image/jpeg" required>
+                <p id="file-name" style="display: none;"></p>
             </div>
             <p class="info-text">Upload your photo (JPG or PNG, max size: 500KB).</p>
         </div>

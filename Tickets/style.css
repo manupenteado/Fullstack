@@ -177,3 +177,36 @@ button:hover {
   align-items: center;
   height: 80px; /* Ajuste a altura conforme necessário */
 }
+
+.ticket-container{
+  color: white;
+}
+
+.decoration-bottom {
+  position: fixed;
+  bottom: 0; /* Coloca a imagem no bottom */
+  left: 0; /* Alinha a imagem à esquerda */
+  width: 100%; /* Faz a imagem ocupar toda a largura da tela */
+  z-index: -1; /* Coloca a imagem atrás de todos os elementos */
+  pointer-events: none; /* Permite que os elementos acima da imagem sejam clicáveis */
+}
+
+.decoration-bottom img {
+  width: 40%; /* Faz a imagem ocupar toda a largura do container */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.decoration-top {
+  position: fixed;
+  top: 0; /* Coloca a imagem no topo */
+  right: 0; /* Alinha a imagem à direita */
+  width: auto; /* Ajusta a largura automaticamente */
+  z-index: -1; /* Coloca a imagem atrás de todos os elementos */
+  pointer-events: none; /* Permite que os elementos acima da imagem sejam clicáveis */
+}
+
+.decoration-top img {
+  width: 500px; /* Define um tamanho fixo para a imagem (ajuste conforme necessário) */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
