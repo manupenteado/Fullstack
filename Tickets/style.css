@@ -180,6 +180,7 @@ button:hover {
 
 .ticket-container{
   color: white;
+  text-align: center;
 }
 
 .decoration-bottom {
@@ -210,3 +211,49 @@ button:hover {
   height: auto; /* Mantém a proporção da imagem */
 }
 
+.avatar{
+  display: none;
+  max-width: 200px;
+  margin-top: 20px;}
+
+/* Centraliza o ticket */
+
+.ticket-wrapper {
+  position: relative;
+  width: 500px; /* Ajuste conforme necessário */
+  margin: 50px auto; /* Centraliza horizontalmente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+}
+
+/* Ajusta o tamanho do ticket */
+.ticket-image {
+  width: 100%;
+  display: block;
+}
+
+/* Área de informações dentro do ticket */
+.ticket-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  text-align: center;
+  font-family: "Inconsolata", monospace;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Avatar dentro do ticket */
+.ticket-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 10%;
+  margin-bottom: 10px; /* Para não colar no texto */
+}

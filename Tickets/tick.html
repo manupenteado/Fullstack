@@ -1,20 +1,50 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Ticket</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="ticket-container">
-        <h1>Meu Ticket</h1>
-        <div id="ticket-info">
-            <p><strong>Nome:</strong> <span id="ticket-fullName"></span></p>
-            <p><strong>E-mail:</strong> <span id="ticket-email"></span></p>
-            <p><strong>GitHub:</strong> <span id="ticket-githubUsername"></span></p>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
+    </head>
+
+<body onload="loadTicketData()">
+
+    <header>
+        <div class = "title-container">
+            <img src = "assets/images/logo-full.svg" alt = "Logo" class = "icon">
+            <span class = "title-text"></span>
         </div>
-        <img id="ticket-avatar" src="#" alt="Avatar" style="display: none; max-width: 200px; margin-top: 20px;">
+    </header>
+
+    <div class = "decoration-bottom">
+        <img 
+        src = "assets/images/pattern-squiggly-line-bottom-desktop.svg"
+        /></div>
+        <div class = "decoration-top">
+            <img 
+            src = "assets/images/pattern-squiggly-line-top.svg"
+            /></div>
+
+
+            <div class="ticket-container">
+                <div id="ticket-info">
+
+            <h1 class = "first-title">Congrats, <span class="tick-name"></span>!<br>Your ticket is ready.</h1>
+            <p class = "sub-title">We've emailed your ticket to<br><span class="tick-email"></span> and will send updates in<br>the run up to the event. </p>
+        </div>
+
+
+        <div class="ticket-wrapper">
+            <img src="assets/images/pattern-ticket.svg" alt="Ticket" class="ticket-image">
+        
+            <!-- Conteúdo dentro do ticket -->
+            <div class="ticket-content">
+                <img src = "assets/images/logo-full.svg" alt = "Logo" class = "icon">
+                <img src="assets/images/image-avatar.jpg" alt="Avatar" class="ticket-avatar">
+                <p class="tick-name"></p>
+                <p class="tick-git"></p>
+            </div>
+        </div>
+        
+
+
 
     <script src="script.js"></script>
 </body>

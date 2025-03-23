@@ -68,10 +68,17 @@ function saveTicketData(fullName, email, githubUsername, avatar) {
 function loadTicketData() {
     const ticketData = JSON.parse(localStorage.getItem("ticketData"));
     if (ticketData) {
-        // Preenche as informações do ticket
-        document.getElementById("ticket-fullName").textContent = ticketData.fullName;
-        document.getElementById("ticket-email").textContent = ticketData.email;
-        document.getElementById("ticket-githubUsername").textContent = ticketData.githubUsername;
+        // Seleciona todos os elementos com a classe "ticket-fullName" e preenche com o nome
+        document.querySelectorAll(".tick-name").forEach(el => {
+            el.textContent = ticketData.fullName;
+        });
+
+        document.querySelectorAll(".tick-email").forEach(el => {
+            el.textContent = ticketData.email;
+        });
+        document.querySelectorAll(".tick-git").forEach(el => {
+            el.textContent = ticketData.githubUsername;
+        });
 
         // Exibe a foto do avatar
         const avatarImg = document.getElementById("ticket-avatar");
@@ -79,6 +86,7 @@ function loadTicketData() {
         avatarImg.style.display = "block";
     }
 }
+
 
 // Evento de envio do formulário
 document.getElementById("registrationForm").addEventListener("submit", (event) => {
