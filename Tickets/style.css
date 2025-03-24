@@ -1,6 +1,6 @@
 /* Imagem de fundo para Desktop */
 body {
-  background-image: url('assets/images/background-desktop.png'); /* Caminho para a imagem SVG */
+  background-image: url('assets/images/pattern-lines.svg'),url('assets/images/background-desktop.png'); /* Caminho para a imagem SVG */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
