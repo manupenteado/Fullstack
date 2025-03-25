@@ -1,30 +1,24 @@
-/* Imagem de fundo para Desktop */
 body {
-  background-image: url('assets/images/pattern-lines.svg'),url('assets/images/background-desktop.png'); /* Caminho para a imagem SVG */
+  background-image: url('assets/images/pattern-lines.svg'),url('assets/images/background-desktop.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    
   }
 
-  /* Imagem de fundo para Mobile */
   @media screen and (max-width: 768px) {
     body {
-      background-image: url('assets/images/background-mobile.png');  /* Caminho para a imagem de mobile */
+      background-image: url('assets/images/background-mobile.png');  
     }
   }
 
   
-/* Imagem de fundo para Tablet (entre 768px e 1024px) */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   body {
-    background-image: url('assets/images/background-tablet.png');  /* Imagem para tablet */
+    background-image: url('assets/images/background-tablet.png');  
   }
 }
-  
-  /* Adicionando a imagem SVG sobre o fundo */
-  /*tem que adicionar as linhas - boa sorte!*/
-  
-  /* Centralizando no topo */
+    
 header {
   position: absolute;
   top: 30px;
@@ -33,9 +27,8 @@ header {
   text-align: center;
 }
 
-/* Ajustando o tamanho do ícone */
 .icon {
-  width: 160px; /* Ajuste o tamanho conforme necessário */
+  width: 160px; 
   height: auto;
 }
 
@@ -43,9 +36,9 @@ header {
   text-align: center;
   font-size: 45px;
   font-weight: 700;
-  margin-top: 100px; /*espaco do header*/
+  margin-top: 100px;
   color: white;
-  font-family: 'Inconsolata', monospace; /* Definição da fonte aqui */
+  font-family: 'Inconsolata', monospace; 
 }
 
 .sub-title{
@@ -53,7 +46,7 @@ header {
   font-size: 20px;
   margin-top: 1px;
   color: white;
-  font-family: 'Inconsolata', monospace; /* Definição da fonte aqui */
+  font-family: 'Inconsolata', monospace; 
 }
 
 .upload-container{
@@ -89,9 +82,9 @@ h2 {
 }
 
 #drop-area p {
-  color: rgba(255, 255, 255, 0.7); /* Branco com 70% de opacidade */
+  color: rgba(255, 255, 255, 0.7); 
   font-size: 16px;
-  font-weight: 500; /* Deixa um pouco mais elegante */
+  font-weight: 500; 
 }
 
 
@@ -103,11 +96,10 @@ h2 {
 .upload-icon{
   width: 40px;
   height: 40px;
-  /*margin-bottom: 10px;*/
 }
 
 #file-input {
-  display: none; /* Esconde o input padrão */
+  display: none; 
 }
 
 .form-container{
@@ -123,7 +115,6 @@ h2 {
 
 .form-group label {
   display: block;
-  /*margin-bottom: 5px;*/
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -147,16 +138,17 @@ button {
   width: 320px;
   padding: 10px;
   background-color: #F67464;
-  color: white;
+  color: rgb(26, 0, 59);
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
   transition: background 0.3s;
+  font-weight: bold;
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgb(85, 55, 148);
 }
 
 #file-name {
@@ -165,17 +157,15 @@ button:hover {
   margin-top: 10px;
 }
 
-/* Esconde o ícone e o texto quando o arquivo é carregado */
 .file-uploaded .upload-icon,
 .file-uploaded .upload-text {
   display: none;
 }
 
-/* Ajusta o estilo da área de upload quando o arquivo é carregado */
 .file-uploaded {
   justify-content: center;
   align-items: center;
-  height: 80px; /* Ajuste a altura conforme necessário */
+  height: 80px; 
 }
 
 .ticket-container{
@@ -185,30 +175,30 @@ button:hover {
 
 .decoration-bottom {
   position: fixed;
-  bottom: 0; /* Coloca a imagem no bottom */
-  left: 0; /* Alinha a imagem à esquerda */
-  width: 100%; /* Faz a imagem ocupar toda a largura da tela */
-  z-index: -1; /* Coloca a imagem atrás de todos os elementos */
-  pointer-events: none; /* Permite que os elementos acima da imagem sejam clicáveis */
+  bottom: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: -1; 
+  pointer-events: none; 
 }
 
 .decoration-bottom img {
-  width: 40%; /* Faz a imagem ocupar toda a largura do container */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 40%; 
+  height: auto; 
 }
 
 .decoration-top {
   position: fixed;
-  top: 0; /* Coloca a imagem no topo */
-  right: 0; /* Alinha a imagem à direita */
-  width: auto; /* Ajusta a largura automaticamente */
-  z-index: -1; /* Coloca a imagem atrás de todos os elementos */
-  pointer-events: none; /* Permite que os elementos acima da imagem sejam clicáveis */
+  top: 0; 
+  right: 0; 
+  width: auto; 
+  z-index: -1; 
+  pointer-events: none; 
 }
 
 .decoration-top img {
-  width: 500px; /* Define um tamanho fixo para a imagem (ajuste conforme necessário) */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 500px; 
+  height: auto; 
 }
 
 .avatar{
@@ -216,32 +206,29 @@ button:hover {
   max-width: 200px;
   margin-top: 20px;}
 
-/* Centraliza o ticket */
-
 .ticket-wrapper {
   position: relative;
-  width: 500px; /* Ajuste conforme necessário */
-  margin: 50px auto; /* Centraliza horizontalmente */
+  width: 500px; 
+  margin: 50px auto;  
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 60px;
 }
 
-/* Ajusta o tamanho do ticket */
+
 .ticket-image {
   width: 100%;
   display: block;
 }
 
-/* Área de informações dentro do ticket */
 .ticket-content {
   position: absolute;
-  top: 60%;
+  top: 45%;
   left: 40%;
   transform: translate(-50%, -50%);
   width: 80%;
-  text-align: center;
+  /*text-align: center;*/
   color: white;
   font-size: 10px;
   display: flex;
@@ -249,27 +236,77 @@ button:hover {
   align-items: center;
 }
 
-/* Avatar dentro do ticket */
-.ticket-avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 10%;
-  margin-bottom: 10px; /* Para não colar no texto */
-}
+
 
 .ticket-side-text {
   position: absolute;
-  right: -85px; /* Ajuste conforme necessário */
-  top: 30%;
+  right: -85px; 
+  top: 37%;
   transform: rotate(90deg) translateY(-50%);
   transform-origin: center;
-  font-size: 16px;
+  font-size: 20px;
   font-family: "Inconsolata", monospace;
-  color: #aaa; /* Cor mais suave para combinar com o design */
+  color: #aaa; 
   letter-spacing: 2px;
 }
 
+.user-space {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ticket-avatar {
+  width: 90px;
+  height: 90px; 
+  border-radius: 10%;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.date-loc {
+  margin-bottom: 8%;
+}
+
+.tick-git{
+  font-family: "Inconsolata", monospace;
+  font-size: 20px;
+  color: #aaa; 
+  margin-top: 0;
+}
+
 .icon-tick{
-  width: 250px; /* Ajuste o tamanho conforme necessário */
+  width: 250px; 
   height: auto;
+}
+
+
+.info-part {
+  display: flex;          
+  align-items: center;    
+  gap: 5px;              
+  margin: 10px 0;        
+}
+
+.icon-info {
+  width: 16px;           
+  height: 16px;
+}
+
+.info-img {
+  margin: 0;             
+  color: #ffffffba;           
+  font-size: 14px;       
+}
+
+.date-loc{
+  font-family: "Inconsolata", monospace;
+  color: #aaa; 
+  letter-spacing: 2px;
+  font-size: 10px;
+
 }

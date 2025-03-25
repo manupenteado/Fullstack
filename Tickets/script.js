@@ -1,28 +1,40 @@
 const dropArea = document.getElementById("drop-area");
 const fileInput = document.getElementById("file-input");
 
+// Abre a janela de arquivos ao clicar na área
 dropArea.addEventListener("click", () => fileInput.click());
 
+// Processa arquivos selecionados manualmente
 fileInput.addEventListener("change", (event) => {
-    const files = event.target.files;
-    console.log("Arquivo carregado:", files[0]); // Verifique no console do navegador
-    handleFiles(files);
+    handleFiles(event.target.files);
 });
 
+// Previne comportamento padrão e destaca a área
 dropArea.addEventListener("dragover", (event) => {
     event.preventDefault();
-    dropArea.style.background = "rgba(255, 255, 255, 0.2)";
+    dropArea.classList.add("highlight"); // Adicione uma classe de destaque (opcional)
 });
 
+// Remove o destaque ao sair
 dropArea.addEventListener("dragleave", () => {
-    dropArea.style.background = "rgba(255, 255, 255, 0.1)";
+    dropArea.classList.remove("highlight");
 });
 
+// Processa arquivos soltos na área
 dropArea.addEventListener("drop", (event) => {
     event.preventDefault();
-    dropArea.style.background = "rgba(255, 255, 255, 0.1)";
-    handleFiles(event.dataTransfer.files);
+    dropArea.classList.remove("highlight");
+    
+    const files = event.dataTransfer.files;
+    if (files.length) {
+        console.log("Arquivo solto:", files[0]);
+        handleFiles(files);
+        
+        // Atualiza o input file (opcional, se quiser refletir no formulário)
+        fileInput.files = files;
+    }
 });
+
 
 function handleFiles(files) {
     const file = files[0];

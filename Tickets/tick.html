@@ -1,6 +1,8 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <title>Your ticket</title>
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400&display=swap" rel="stylesheet">
     </head>
 
@@ -8,7 +10,7 @@
 
     <header>
         <div class = "title-container">
-            <img src = "assets/images/logo-full.svg" alt = "Logo" class = "icon">
+            <img src = "assets/images/logo-full.svg" class = "icon">
             <span class = "title-text"></span>
         </div>
     </header>
@@ -32,14 +34,20 @@
 
 
         <div class="ticket-wrapper">
-            <img src="assets/images/pattern-ticket.svg" alt="Ticket" class="ticket-image">
+            <img src="assets/images/pattern-ticket.svg" class="ticket-image">
         
-            <!-- Conteúdo dentro do ticket -->
             <div class="ticket-content">
-                <img src = "assets/images/logo-full.svg" alt = "Logo" class = "icon-tick">
-                <img src="assets/images/image-avatar.jpg" alt="Avatar" class="ticket-avatar">
-                <p class="tick-name"></p>
-                <p class="tick-git"></p>
+                <img src = "assets/images/logo-full.svg" class = "icon-tick">
+                <p class = "date-loc">Jan 31, 2025 / Austin, TX</p>
+                <div class = "user-space">
+                    <img id="ticket-avatar" src="" class="ticket-avatar" />              
+                    <div class = "user-info">
+                        <p class="tick-name" style="font-size: 15px;"></p>
+                        <p class="tick-git"></p>
+                    </div>
+                    
+                </div>
+
                 <p class="ticket-side-text">#010609</p>
             </div>
         </div>
