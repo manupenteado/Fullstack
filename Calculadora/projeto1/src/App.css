@@ -1,0 +1,119 @@
+.calculator {
+  background: rgb(255, 255, 255);
+  padding: 2rem;
+  border-radius: 10px 10px 100px 10px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 1.5rem;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.input-field {
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.input-field input {
+  background-color: white;
+  color: black; 
+  border: 1px solid #00000023;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1.2rem;
+  box-sizing: border-box;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.input-field input::placeholder {
+  color: #818181ee;
+  font-weight: bold;
+}
+
+.input-field input:focus {
+  outline: none;
+  border-color: black;
+}
+
+label {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.6rem;
+  font-weight: 550;
+  color: #818181ee;
+
+}
+
+.calculate-btn {
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 10%;
+  margin-bottom: 1.5rem;
+  transition: background-color 0.3s;
+  outline: none;
+
+}
+
+.result {
+  text-align: left;
+  padding: 1rem;
+}
+
+.result p {
+  margin: 0.5rem 0;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 900;
+  font-style:italic ;
+  font-family: 'Poppins';
+
+}
+
+.result p span:first-child {
+  color: #8a2be2; 
+  margin-right: 0.5rem;
+
+}
+
+.result p span:last-child {
+  color: black;
+}
+.calculate-button {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1.5rem 0;
+  padding-right: 20px;
+}
+
+.purple-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #8a2be2; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.purple-circle:hover {
+  background-color: #2e2e2e; /* Roxo mais escuro no hover */
+  transform: scale(1.05);
+}
+
+
+
