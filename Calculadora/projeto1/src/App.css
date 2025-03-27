@@ -128,7 +128,7 @@ label {
   margin-top: 0.3rem;
   display: block;
 }
-.divider-line {
+.line {
   position: absolute;
   left: 35px; 
   right: 75px;
@@ -151,7 +151,7 @@ label {
     margin: 1rem 0; /* Ajusta o espaçamento */
   }
 
-  .divider-line {
+  .line {
     left: 35px;
     right: 35px; /* Ajusta a linha para ficar centralizada */
     top: 140px; /* Ajuste fino da posição vertical */
