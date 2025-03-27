@@ -1,13 +1,10 @@
 export const isValidDate = (day, month, year) => {
-    // Verifica se month tem exatamente 2 dígitos
     if (month.length !== 2 || isNaN(month)) return false;
     
-    // Converte para números
     const d = Number(day);
-    const m = Number(month); // Já garantimos que tem 2 dígitos
+    const m = Number(month); 
     const y = Number(year);
   
-    // Restante da validação permanece igual
     if (isNaN(d) || isNaN(y)) return false;
     if (d < 1 || d > 31) return false;
     if (m < 1 || m > 12) return false;

@@ -3,7 +3,7 @@ import './App.css';
 import DateInput from './Components/DateInput';
 import Result from './Components/Result';
 import Button from './Components/Button';
-import { isValidDate } from './Utils/JS ValidDate';
+import { isValidDate } from './Utils/Validation';
 
 function App() {
   const [day, setDay] = useState('');
