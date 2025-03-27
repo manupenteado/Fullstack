@@ -128,7 +128,6 @@ label {
   margin-top: 0.3rem;
   display: block;
 }
-
 .divider-line {
   position: absolute;
   left: 35px; 
@@ -141,4 +140,30 @@ label {
 
 .arrow{
   width: 30px;
+}
+
+/* Versão Mobile (até 768px) */
+@media (max-width: 768px) {
+  .calculate-button {
+    justify-content: center; /* Centraliza o botão */
+    right: 0; /* Remove o deslocamento para direita */
+    padding-right: 0; /* Remove o padding direito */
+    margin: 1rem 0; /* Ajusta o espaçamento */
+  }
+
+  .divider-line {
+    left: 35px;
+    right: 35px; /* Ajusta a linha para ficar centralizada */
+    top: 140px; /* Ajuste fino da posição vertical */
+  }
+
+  .input-group {
+    padding-right: 0; /* Remove o padding direito */
+    justify-content: center; /* Centraliza os inputs */
+    gap: 15px; /* Reduz o espaço entre os inputs */
+  }
+
+  .input-field {
+    max-width: 80px; /* Controla o tamanho dos inputs */
+  }
 }
