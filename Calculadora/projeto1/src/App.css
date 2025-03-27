@@ -1,17 +1,29 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #f1ebfe;
+}
+
 .calculator {
   background: rgb(255, 255, 255);
   padding: 2rem;
   border-radius: 10px 10px 100px 10px;
   width: 100%;
-  max-width: 400px;
+  max-width: 440px;
   text-align: center;
+  position: relative;
 }
 
 .input-group {
   display: flex;
   margin-bottom: 1.5rem;
-  gap: 30px;
+  gap: 20px;
   justify-content: space-between;
+  padding-right: 80px;
 }
 
 .input-field {
@@ -28,8 +40,8 @@
   width: 100%;
   font-size: 1.2rem;
   box-sizing: border-box;
-  font-weight: bold;
-  border-radius: 6px;
+  font-weight: 750;
+  border-radius: 4px;
 }
 
 .input-field input::placeholder {
@@ -51,24 +63,10 @@ label {
 
 }
 
-.calculate-btn {
-  color: white;
-  border: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  width: 10%;
-  margin-bottom: 1.5rem;
-  transition: background-color 0.3s;
-  outline: none;
-
-}
-
 .result {
   text-align: left;
-  padding: 1rem;
-}
+  padding: 0.1rem;
+  margin-top: 0.1rem;}
 
 .result p {
   margin: 0.5rem 0;
@@ -81,9 +79,7 @@ label {
 }
 
 .result p span:first-child {
-  color: #8a2be2; 
-  margin-right: 0.5rem;
-
+  color: #864CFF;
 }
 
 .result p span:last-child {
@@ -92,15 +88,16 @@ label {
 .calculate-button {
   display: flex;
   justify-content: flex-end;
-  margin: 1.5rem 0;
-  padding-right: 20px;
+  padding-right: 1.2rem;
+  position: relative;
+  right: -30px;
 }
 
 .purple-circle {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  background-color: #8a2be2; 
+  background-color: #864CFF; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -108,12 +105,40 @@ label {
   padding: 0;
   cursor: pointer;
   transition: transform 0.3s, background-color 0.3s;
+  z-index: 2;
 }
 
 .purple-circle:hover {
-  background-color: #2e2e2e; /* Roxo mais escuro no hover */
+  background-color: #2e2e2e; 
   transform: scale(1.05);
 }
 
+.invalid-input {
+  border: 1px solid hsl(0, 100%, 67%) !important;
+}
 
+.invalid-label {
+  color: hsl(0, 100%, 67%) !important;
+}
 
+.error {
+  color: hsl(0, 100%, 67%);
+  font-size: 0.6rem;
+  font-style: italic;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.divider-line {
+  position: absolute;
+  left: 35px; 
+  right: 75px;
+  top: 138px; 
+  height: 1px;
+  background-color: hsl(0, 0%, 86%);
+  z-index: 1;
+}
+
+.arrow{
+  width: 30px;
+}
