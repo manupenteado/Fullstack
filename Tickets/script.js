@@ -65,9 +65,34 @@ function handleFiles(files) {
 
     //identifys the name od the file by this id
     const fileNameDisplay = document.getElementById("file-name");
+    //identifys where to put the preview of the photo by this id
+    const imagePreview = document.getElementById("image-preview"); 
 
     //class on css once a file is added
     dropArea.classList.add("file-uploaded");
+
+    // Cria a preview da imagem
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        // cleans last content
+        imagePreview.innerHTML = "";
+
+        // creates the image and defines it
+        const img = document.createElement("img");
+        img.src = e.target.result;
+        img.style.maxWidth = "100%";
+        img.style.maxHeight = "200px";
+        img.style.borderRadius = "10px"; 
+
+        // add the image to the container
+        imagePreview.appendChild(img);
+
+        //shows the image
+        imagePreview.style.display = "block";
+    };
+    
+   reader.readAsDataURL(file);
+
     //gets the file's name
     fileNameDisplay.textContent = file.name;
     //shows the file's name
