@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button({ onClick }) {
+function Button({onClick}) {
   return (
     <div className="calculate-button">
       <button 

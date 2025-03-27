@@ -1,7 +1,7 @@
 import React from 'react';
 
 //parameters
-function DateInput({ day, month, year, setDay, setMonth, setYear, isInvalid }) {
+function DateInput({day, month, year, setDay, setMonth, setYear, isInvalid}) {
 
   //limits the day in case theres more then two digits and set the day
   const handleDayChange = (e) => {
@@ -44,9 +44,10 @@ function DateInput({ day, month, year, setDay, setMonth, setYear, isInvalid }) {
   };
 
 
-  //
+  //what we see
   return (
     <div className="input-group">
+
       <div className="input-field">
         <label className={isInvalid ? 'invalid-label' : ''}>DAY</label>
         <input

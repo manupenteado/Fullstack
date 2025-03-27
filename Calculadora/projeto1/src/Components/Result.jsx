@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Result({ age }) {
+function Result({age}) {
   return (
     <div className="result">
       <p><span>{age ? age.years : "--"}</span>
