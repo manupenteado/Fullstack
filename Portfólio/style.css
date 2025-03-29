@@ -1,13 +1,129 @@
-body{
-
-    font-family: Georgia, serif;
+body {
+    font-family: 'Poppins';
+    background-color: #964650;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Adicionado para centralizar verticalmente */
     margin: 0;
-    padding: 30;
-    background-color: 94C7B4
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 480px) {
+    header {
+        border-radius: 40px; /* Raio menor para mobile */
+        padding: 15px;
+    }
+    
+    .foto-manu {
+        width: 12rem; /* Tamanho menor para mobile */
+    }
+    
+    a {
+        padding: 10px 20px; /* Espaçamento menor para mobile */
+    }
 }
 
 header {
-    background-color: 30253E; /* Cor do fundo do cabeçalho */
-    color: C3C88C;
-    padding: 10px 0;
+    background-color: #DDD7D7;
+    color: #964650;
+    border-radius: 70px;
+    width: 90%; /* Alterado para porcentagem */
+    max-width: 440px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titulo {
+    margin: 0;
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Texto responsivo */
+}
+
+.foto-manu {
+    width: 15rem; /* Alterado de height para width */
+    max-width: 80%; /* Limita o tamanho em telas pequenas */
+    height: auto; /* Mantém a proporção */
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+h2, p, ul {
+    width: 90%; /* Alterado para porcentagem */
+    max-width: 440px;
+    text-align: center;
+    color: #DDD7D7;
+}
+
+h2 {
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Texto responsivo */
+}
+
+p {
+    font-size: clamp(0.9rem, 3vw, 1.1rem); /* Texto responsivo */
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+    width: 90%; /* Alterado para porcentagem */
+}
+
+a {
+    background-color: #DDD7D7;
+    color: #964650;
+    text-decoration: none;
+    border-radius: 50px;
+    font-family: 'Poppins';
+    font-weight: bold;
+    padding: 12px 25px; /* Reduzido um pouco para mobile */
+    display: inline-block;
+    font-size: clamp(1rem, 4vw, 1.1rem); /* Texto responsivo */
+    min-width: 180px; /* Reduzido para mobile */
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: fit-content;
+    font-size: 40px;
+    line-height: 1.5;
+    font-family: system-ui,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #DDD7D7;
+    background:
+      radial-gradient(1.13em at 50% 1.6em,#DDD7D7 99%,#0000 101%) calc(50% - 1.6em) 0/3.2em 100% text,
+      radial-gradient(1.13em at 50% -0.8em,#0000 99%,#DDD7D7 101%) 50% .8em/3.2em 100% repeat-x  text;
+    animation: l9 2s linear infinite;
+  }
+  .loader:before {
+    content: "Loading";
+  }
+  @keyframes l9 {
+    to {background-position: calc(50% + 1.6em) 0,calc(50% + 3.2em) .8em}
+  }
+
+
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #964650; /* Cor de fundo do loading */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
 }
