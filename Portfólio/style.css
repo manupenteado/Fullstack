@@ -1,10 +1,22 @@
+/*body {
+    font-family: 'Poppins';
+    background-color: #964650;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin: 0;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}*/
+
 body {
     font-family: 'Poppins';
     background-color: #964650;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* Adicionado para centralizar verticalmente */
     margin: 0;
     min-height: 100vh;
     padding: 20px;
@@ -27,35 +39,86 @@ body {
     }
 }
 
+#content {
+    width: 90%;
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*
 header {
     background-color: #DDD7D7;
     color: #964650;
     border-radius: 70px;
-    width: 90%; /* Alterado para porcentagem */
+    width: 90%;
     max-width: 440px;
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
+*/
+header {
+    background-color: #DDD7D7;
+    color: #964650;
+    border-radius: 70px;
+    width: 100%; 
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 
 .titulo {
     margin: 0;
     font-size: clamp(1.5rem, 5vw, 2rem); /* Texto responsivo */
 }
-
+/*
 .foto-manu {
-    width: 15rem; /* Alterado de height para width */
-    max-width: 80%; /* Limita o tamanho em telas pequenas */
-    height: auto; /* Mantém a proporção */
+    width: 15rem; 
+    max-width: 80%; 
+    height: auto; 
     border-radius: 50%;
     margin-bottom: 20px;
+}*/
+.foto-manu {
+    width: 15rem;
+    max-width: 80%;
+    height: auto;
+    border-radius: 50%;
+    margin: 0 auto 20px; /* Centraliza horizontalmente */
+    display: block; /* Necessário para margin auto funcionar */
 }
 
 h2, p, ul {
-    width: 90%; /* Alterado para porcentagem */
-    max-width: 440px;
+    width: 100%; /* Agora todos usam a mesma largura do content-wrapper */
     text-align: center;
     color: #DDD7D7;
+    margin: 10px 0; /* Espaçamento consistente */
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center; /* Centraliza os itens da lista */
+}
+
+a {
+    background-color: #DDD7D7;
+    color: #964650;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    padding: 12px 25px;
+    display: inline-block;
+    font-size: clamp(1rem, 4vw, 1.1rem);
+    min-width: 180px;
+    text-align: center;
+    transition: all 0.3s ease;
 }
 
 h2 {
@@ -65,7 +128,7 @@ h2 {
 p {
     font-size: clamp(0.9rem, 3vw, 1.1rem); /* Texto responsivo */
 }
-
+/*
 ul {
     padding: 0;
     list-style: none;
@@ -73,7 +136,7 @@ ul {
     flex-direction: column;
     gap: 15px;
     margin: 20px 0;
-    width: 90%; /* Alterado para porcentagem */
+    width: 90%;
 }
 
 a {
@@ -83,14 +146,14 @@ a {
     border-radius: 50px;
     font-family: 'Poppins';
     font-weight: bold;
-    padding: 12px 25px; /* Reduzido um pouco para mobile */
+    padding: 12px 25px; 
     display: inline-block;
-    font-size: clamp(1rem, 4vw, 1.1rem); /* Texto responsivo */
-    min-width: 180px; /* Reduzido para mobile */
+    font-size: clamp(1rem, 4vw, 1.1rem); 
+    min-width: 180px; 
     text-align: center;
     transition: all 0.3s ease;
-}
-/*
+}*/
+
 /* HTML: <div class="loader"></div> */
 #loader {
     width: fit-content;
@@ -121,31 +184,11 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #1e1e1e;
+    background: #964650;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #00ff00;
-    font-family: "Courier New", monospace;
     font-size: 20px;
     z-index: 1;
 }
 
-/*
-.loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #964650; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
