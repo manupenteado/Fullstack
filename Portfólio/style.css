@@ -291,7 +291,24 @@ a {
         min-width: 100%;
     }
 }
+.contato-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaço entre os itens */
+    flex-wrap: wrap; /* Para responsividade */
+}
 
+.contato-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espaço entre a logo e o texto */
+}
+
+.logo {
+    width: 24px; /* Ajuste conforme necessário */
+    height: 24px;
+}
 
 
 
