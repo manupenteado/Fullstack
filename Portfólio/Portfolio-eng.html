@@ -1,65 +1,104 @@
 <html>
     <head>
-            <link rel="icon" type = "image/x-icon" href = "favicon.ico">
-            <title>My Portfolio</title>
+            <link rel="icon" type = "image/x-icon" href = ".favicon.ico">
+            <title>Meu Portfólio</title>
             <link rel = "stylesheet" href = "style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Parisienne&family=Mr+Dafoe&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         </head>
     <body>
 
-        <h1>Get to know me</h1>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href = "about">About Me</a></li>
-                    <li><a href = "techSkills">Technical Skills</a></li>
-                    <li><a href = "softSkills">Soft Skils</a></li>
-                    <li><a href = "projects">Projects</a></li>
-                    <li><a href = "contat">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <section id = "about">
+
+ 
+
+
+
+
+
+            <h1 class="up-text">Get to know me!</h1>
+       
+
             <h2>About me</h2>
-            <p>
-                Hello! I am Emanuele Penteado, a computer engineering student and searcher at Senai Cimatec University. 
-                <br>
-            </p>
-        </section>
+            <p class="about-me">
 
-        <section id = "techSkills">
+                Hello! I'm <span class="name">Emanuele Penteado</span>, a Computer Engineering student and researcher at Senai Cimatec University.
+                <br>
+                I'm currently in my sixth semester and developing two scientific research projects at the university's Optics Lab. 
+                The first involves creating an optical fiber-based sensor to detect leaks in gas pipelines. The second is a study aimed at 
+                identifying a 
+                geometry that, when applied to optical fiber, enables a linear relationship with the macrobending phenomenon.
+                <br>
+                Computing, particularly Python, has been an essential tool for processing data in both projects. This technology has 
+                significantly aided me in data manipulation and analysis, which deeply excites me, as I believe computing is a powerful ally 
+                in pursuing innovative and efficient solutions.
+            </p>
+
+            <div class="imagens">
+                <img src="cimatec.jpg" class="foto-cimatec"/>
+                <img src="caminho.webp" class="foto-caminho"/>
+            </div>
+
             <h2>Technical Skills</h2>
             <p>
                 <ul>
                     <li>Python</li>
                     <li>C</li>
                     <li>Java</li>
+                    <li>Html/CSS</li>
+
                 </ul>
             </p>
-        </section>
 
-        <section id = "softSkills">
             <h2>Soft Skills</h2>
             <p>
                 <ul>
                     <li>Communication</li>
                     <li>Empathy</li>
                     <li>Flexibility</li>
-                    <li>Organization</li>
-                    <li>Team work</li>
+                    <li>Organizational skills</li>
+                    <li>Teamwork</li>
                 </ul>
             </p>
-        </section>
 
-        <section id = "projects">
             <h2>Projects</h2>
+            <div class="previews-container">
+                <div class="preview-wrapper">
+                    <iframe src="https://tickets-manupenteado.vercel.app/" 
+                            width="100%" 
+                            height="300px"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    <p class="preview-caption"><a href="https://tickets-manupenteado.vercel.app/">Tickets</a></p>
+                </div>
+                
+                <div class="preview-wrapper">
+                    <iframe src="https://calculator-manupenteado.vercel.app/" 
+                            width="100%" 
+                            height="300px"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    <p class="preview-caption"><a href="https://calculator-manupenteado.vercel.app/">Calculator</a></p>
+                </div>
+                
+                <div class="preview-wrapper">
+                    <iframe src="https://full-stack-apis.vercel.app/" 
+                            width="100%" 
+                            height="300px"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    <p class="preview-caption"><a href="https://full-stack-apis.vercel.app/">APIs</a></p>
+                </div>
+            </div>
             <p></p>
-        </section>
 
-        <section id = "contat">
-            <h2>Contat</h2>
+            <h2>Contact</h2>
             <p></p>
-        </section>
+
+
+        <script src = "script-port.js"></script>
 
     </body>
 </html>

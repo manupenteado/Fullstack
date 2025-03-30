@@ -1,30 +1,31 @@
 <html>
     <head>
-            <link rel="icon" type = "image/x-icon" href = "favicon.ico">
+            <link rel="icon" type = "image/x-icon" href = ".favicon.ico">
             <title>Meu Portfólio</title>
             <link rel = "stylesheet" href = "style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Parisienne&family=Mr+Dafoe&family=Petit+Formal+Script&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         </head>
     <body>
 
-        <h1>Venha cá me conhecer um pouquinho!</h1>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href = "sobre">Sobre Mim</a></li>
-                    <li><a href = "habilidadesTecnicas">Habilidades Técnicas</a></li>
-                    <li><a href = "softSkills">Soft Skils</a></li>
-                    <li><a href = "projetos">Projetos</a></li>
-                    <li><a href = "contato">Contato</a></li>
-                </ul>
-            </nav>
-        </header>
 
-        <section id = "sobre">
+
+ 
+
+
+
+
+
+            <h1 class="up-text">Venha cá me conhecer um pouquinho!</h1>
+       
+
             <h2>Sobre Mim</h2>
-            <p>
-                Olá! Sou Emanuele Penteado, uma estudante de Engenharia de Computação do sexto semestre e pesquisadora da Universidade Senai Cimatec.
+            <p class="about-me">
+                Olá! Sou <span class="name">Emanuele Penteado</span>, uma estudante de Engenharia de Computação e pesquisadora da Universidade Senai Cimatec.
                 <br>
-                Atualmente, estou no sexto semestre do curso e estou desenvolvendo dois projetos como parte das minhas duas iniciações 
+                Atualmente, estou no sexto semestre do curso e estou desenvolvendo dois projetos como iniciações 
                 científicas no Laboratório de Óptica da faculdade em que estudo. 
                 O primeiro envolve a criação de um sensor baseado em fibra ótica para detectar vazamentos em tubulações de gás.
                 O segundo é um estudo cujo objetivo é identificar uma geometria que, ao ser aplicada à fibra ótica, possibilite uma relação linear com o fenômeno de macrobending.
@@ -33,20 +34,23 @@
                 em ambos os projetos. O uso dessa tecnologia tem me auxiliado significativamente na manipulação e análise dos dados, e isso é algo que me
                 entusiasma profundamente, pois acredito que a computação é uma aliada poderosa na busca por soluções inovadoras e eficientes.
             </p>
-        </section>
 
-        <section id = "habilidadesTecnicas">
+            <div class="imagens">
+                <img src="cimatec.jpg" class="foto-cimatec"/>
+                <img src="caminho.webp" class="foto-caminho"/>
+            </div>
+
             <h2>Habilidades Técnicas</h2>
             <p>
                 <ul>
                     <li>Python</li>
                     <li>C</li>
                     <li>Java</li>
+                    <li>Html/CSS</li>
+
                 </ul>
             </p>
-        </section>
 
-        <section id = "softSkills">
             <h2>Soft Skills</h2>
             <p>
                 <ul>
@@ -57,17 +61,43 @@
                     <li>Trabalho em equipe</li>
                 </ul>
             </p>
-        </section>
 
-        <section id = "projetos">
             <h2>Projetos</h2>
+            <div class="previews-container">
+                <div class="preview-wrapper">
+                    <iframe src="https://tickets-manupenteado.vercel.app/" 
+                            width="100%" 
+                            height="300px"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    <p class="preview-caption"><a href="https://tickets-manupenteado.vercel.app/">Tickets</a></p>
+                </div>
+                
+                <div class="preview-wrapper">
+                    <iframe src="https://calculator-manupenteado.vercel.app/" 
+                            width="100%" 
+                            height="300px"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    <p class="preview-caption"><a href="https://calculator-manupenteado.vercel.app/">Calculadora</a></p>
+                </div>
+                
+                <div class="preview-wrapper">
+                    <iframe src="https://full-stack-apis.vercel.app/" 
+                            width="100%" 
+                            height="300px"
+                            frameborder="0"
+                            allowfullscreen></iframe>
+                    <p class="preview-caption"><a href="https://full-stack-apis.vercel.app/">APIs</a></p>
+                </div>
+            </div>
             <p></p>
-        </section>
 
-        <section id = "contato">
             <h2>Contato</h2>
             <p></p>
-        </section>
+
+
+        <script src = "script-port.js"></script>
 
     </body>
 </html>

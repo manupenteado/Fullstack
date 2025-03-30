@@ -7,23 +7,24 @@ document.addEventListener("DOMContentLoaded", function() {
     const lastName = "Penteado"; // Seu último nome
     
     setTimeout(function() {
-        loadingScreen.classList.add('fade-out');
-        
+        loadingScreen.classList.add('fade-out'); 
         loadingScreen.addEventListener('transitionend', function() {
-            loadingScreen.style.display = 'none';
-            content.style.display = 'flex';
-            content.classList.add('show');
+        loadingScreen.style.display = 'none';
+        content.style.display = 'flex';
+        content.classList.add('show');
             
-            // Dentro do eventListener transitionend:
-// Dentro do eventListener 'transitionend':
-document.getElementById('first-name').classList.add('active');
-typeWriter(document.getElementById('first-name'), firstName, 250, function() {
-    // Começa o last-name APÓS o first-name terminar
-    document.getElementById('last-name').classList.add('active');
-    typeWriter(document.getElementById('last-name'), lastName, 250);
-});
+    // Dentro do eventListener transitionend:
+    // Dentro do eventListener 'transitionend':
+    document.getElementById('first-name').classList.add('active');
+    typeWriter(document.getElementById('first-name'), firstName, 250, function() {
+        // Começa o last-name APÓS o first-name terminar
+        document.getElementById('last-name').classList.add('active');
+        typeWriter(document.getElementById('last-name'), lastName, 250);
+    });
         });
-    }, 3000);
+    }, 1000);
+
+
     
     function typeWriter(element, text, speed, callback) {
         let i = 0;
@@ -47,6 +48,5 @@ typeWriter(document.getElementById('first-name'), firstName, 250, function() {
         }
         typing();
 
-       
     }
 });

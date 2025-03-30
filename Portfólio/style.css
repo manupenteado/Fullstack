@@ -11,22 +11,6 @@ body {
     box-sizing: border-box;
 }
 
-
-@media (max-width: 480px) {
-    header {
-        border-radius: 40px; /* Raio menor para mobile */
-        padding: 15px;
-    }
-    
-    .foto-manu {
-        width: 12rem; /* Tamanho menor para mobile */
-    }
-    
-    a {
-        padding: 10px 20px; /* Espaçamento menor para mobile */
-    }
-}
-
 #content {
     width: 90%;
     max-width: 440px;
@@ -55,7 +39,8 @@ body {
     margin: 0;
     font-size: clamp(1.5rem, 5vw, 2rem); /* Texto responsivo */
     color: #DDD7D7;
-
+    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Texto responsivo */
+    margin-bottom: 40px;
 }
 
 
@@ -99,11 +84,8 @@ a {
     transition: all 0.3s ease;
 }
 
-h2 {
-    font-size: clamp(1.2rem, 4vw, 1.5rem); /* Texto responsivo */
-}
 
-p {
+.select {
     font-size: clamp(0.9rem, 3vw, 1.1rem); /* Texto responsivo */
 }
 
@@ -206,10 +188,196 @@ p {
     50% { border-color: transparent }
 }
 
-.typewriter-cursor::after {
-    content: "|";
-    animation: blink 1s step-end infinite;
-    position: absolute;
-    right: 0;
+.about-me{
+    max-width: 800px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza na tela */
+    padding: 0 5%; /* Margens laterais responsivas */
+    text-align: justify; /* Texto justificado */
+    text-justify: inter-word; /* Melhora a justificação */
+    hyphens: auto;
+    font-size: 1.2rem;
+
 }
 
+/* Media queries para ajustes responsivos */
+@media (min-width: 1200px) {
+    .about-me {
+        max-width: 900px;
+        padding: 0 10%; /* Margens maiores em telas grandes */
+    }
+}
+
+.name{
+    font-weight: bold;
+}
+
+
+
+.imagens {
+    position: relative; /* Permite posicionamento absoluto dos filhos */
+    width: 100%;
+    max-width: 800px; /* Ajuste conforme necessário */
+    margin: 0 auto; /* Centraliza o container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a foto do CIMATEC (frente) */
+.foto-cimatec {
+    position: relative; /* Mantém no fluxo normal mas acima da foto-caminho */
+    z-index: 2; /* Garante que fique na frente */
+    width: 70%; /* Ajuste conforme necessário */
+    max-width: 600px; /* Limite máximo de largura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+}
+
+/* Estilo para a foto do caminho (fundo) */
+.foto-caminho {
+    position: absolute; /* Posiciona absolutamente em relação ao container */
+    z-index: 1; /* Fica atrás da foto-cimatec */
+    width: 170%; /* Mais larga que a foto da frente */
+    height: auto;
+    opacity: 0.8; /* Opcional: reduz opacidade para efeito visual */
+    filter: blur(1px); /* Opcional: leve desfoque */
+    object-fit: cover; /* Garante que cubra o espaço */
+}
+
+.previews-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    gap: 40px;
+}
+
+.preview-wrapper {
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex; /* Adicionado */
+    flex-direction: column; /* Adicionado */
+}
+
+.preview-wrapper iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    background: #f5f5f5;
+}
+
+.preview-caption {
+    text-align: center;
+    padding: 12px;
+    background: #f9f9f9;
+    margin: 0;
+    font-weight: 500;
+    width: 100%; /* Garante que ocupa toda a largura */
+    box-sizing: border-box; /* Inclui padding na largura total */
+}
+
+/* Responsividade - Empilha em telas menores */
+@media (max-width: 992px) {
+    .preview-wrapper {
+        flex: 100%;
+        min-width: 100%;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .about-me {
+        padding: 0 8%; /* Margens um pouco menores em tablets */
+    }
+    .foto-cimatec {
+        width: 90%;
+    }
+    
+    .foto-caminho {
+        width: 130%;
+        opacity: 0.6;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-me {
+        padding: 0 5%; /* Margens menores em celulares */
+        text-align: left; /* Em telas muito pequenas, alinhado à esquerda fica melhor */
+    }
+    .foto-cimatec {
+        width: 95%;
+    }
+    
+    .foto-caminho {
+        width: 140%;
+    }
+    header {
+        border-radius: 40px; /* Raio menor para mobile */
+        padding: 15px;
+    }
+    
+    .foto-manu {
+        width: 12rem; /* Tamanho menor para mobile */
+    }
+    
+    a {
+        padding: 10px 20px; /* Espaçamento menor para mobile */
+    }
+}
+  /***********************************************************/
+  #loader-port {
+    color: #DDD7D7;
+
+    width: fit-content;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Dancing Script', cursive; 
+    min-width: 340px; /* Espaço reservado para os nomes */
+    font-size: 6rem;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    /* Experimente outras opções abaixo */
+
+  }
+  #loader-port:before {
+    content: "Emanuele Penteado";
+  }
+ 
+
+
+
+  #loading-screen-port {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #964650;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    z-index: 1;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+
+}
+#content-port.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.8s ease-out;
+}
+
+#content-port {
+    opacity: 0;
+}
